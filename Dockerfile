@@ -11,7 +11,7 @@ RUN set -x \
     py-setuptools \
     $PKG_BUILD \
     $PKG_EXTRA \
- && pip --no-cache-dir install https://s3.amazonaws.com/cloudformation-examples/aws-cfn-bootstrap-latest.tar.gz \
+ && pip --no-cache-dir install $AWS_CFN_PACKAGE_URL \
  && apk del $PKG_BUILD \
  && ls -alF /usr/bin/cfn*
 
